@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Войти — PiDEP</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <a class="logo" href="index.html">
+      <img src="pictures/logo.png" alt="логотип" />
+    </a>
+
+    <nav class="left_nav">
+      <a class="nav_btn" href="shop.html">Магазин</a>
+      <a class="nav_btn" href="sales.html">Акции</a>
+    </nav>
+
+    <nav class="right_nav">
+      <a class="nav_btn" href="login.html">Войти</a>
+      <a class="nav_btn" href="register.html">Регистрация</a>
+    </nav>
+  </header>
+
+  <main class="auth_page">
+    <div class="auth_card">
+      <h1 class="auth_title">Вход в аккаунт</h1>
+      <p class="auth_subtitle">Добро пожаловать обратно в PiDEP</p>
+
+      <form class="auth_form" id="login_form" novalidate>
+
+        <div class="form_group">
+          <label for="login_field">Логин или e-mail</label>
+          <input
+            id="login_field"
+            name="login"
+            type="text"
+            class="input_field"
+            placeholder="Введите логин или e-mail"
+            autocomplete="username"
+          />
+          <span class="field_error" id="login_field_err">Введите логин или e-mail</span>
+        </div>
+
+        <div class="form_group">
+          <label for="password_field">Пароль</label>
+          <input
+            id="password_field"
+            name="password"
+            type="password"
+            class="input_field"
+            placeholder="Введите пароль"
+            autocomplete="current-password"
+          />
+          <span class="field_error" id="password_field_err">Введите пароль</span>
+        </div>
+
+        <div style="text-align:right; margin-top:-6px;">
+          <a href="#" style="font-size:13px; color:rgba(255,255,255,0.50);">Забыли пароль?</a>
+        </div>
+
+        <div id="auth_message" class="auth_message" role="alert"></div>
+
+        <button type="submit" class="action_btn">Войти</button>
+
+        <p class="auth_link">
+          Нет аккаунта? <a href="register.html">Зарегистрироваться</a>
+        </p>
+
+      </form>
+    </div>
+  </main>
+
+  <footer class="site_footer">
+    <div class="footer_container">
+      <div class="footer_column">
+        <h4>Информация</h4>
+        <a href="faq.html" class="footer_link" target="_blank">FAQ (Частые вопросы)</a>
+        <a href="agreement.html" class="footer_link" target="_blank">Пользовательское соглашение</a>
+      </div>
+      <div class="footer_column">
+        <h4>Контакты</h4>
+        <a href="https://t.me/LikholetovMichael" target="_blank" class="footer_link">Telegram DM</a>
+        <a href="mailto:michaellikholetov@gmail.com" class="footer_link">michaellikholetov@gmail.com</a>
+        <a href="tel:+79217400069" class="footer_link">+7 (921) 740 00 69</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    var form   = document.getElementById('login_form');
+    var msgBox = document.getElementById('auth_message');
+
+    function setErr(inputId, errId, msg) {
+      var input = document.getElementById(inputId);
+      var err   = document.getElementById(errId);
+      if (msg) {
+        input.classList.add('error');
+        err.textContent = msg;
+        err.classList.add('visible');
+      } else {
+        input.classList.remove('error');
+        err.classList.remove('visible');
+      }
+    }
+
+    function validate() {
+      var ok    = true;
+      var login = document.getElementById('login_field').value.trim();
+      var pass  = document.getElementById('password_field').value;
+
+      if (!login) {
+        setErr('login_field', 'login_field_err', 'Введите логин или e-mail');
+        ok = false;
+      } else {
+        setErr('login_field', 'login_field_err', '');
+      }
+
+      if (!pass) {
+        setErr('password_field', 'password_field_err', 'Введите пароль');
+        ok = false;
+      } else {
+        setErr('password_field', 'password_field_err', '');
+      }
+
+      return ok;
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (validate()) {
+        msgBox.textContent = 'Данные введены корректно.';
+        msgBox.className   = 'auth_message success';
+      } else {
+        msgBox.textContent = '';
+        msgBox.className   = 'auth_message';
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кастомизация профиля - PiDEP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="index.html">
+      <img src="pictures/logo.png" alt="логотип" />
+    </a>
+
+    <nav class="left_nav">
+      <a class="shop_button nav_btn" href="shop.html">Магазин</a>
+      <a class="sales_button nav_btn" href="sales.html">Акции</a>
+    </nav>
+
+    <nav class="right_nav">
+      <a class="profile_button nav_btn" href="profile.html">Профиль</a>
+    </nav>
+  </header>
+
+<main class="background">
+  <div class="container">
+    <section class="profile_card" aria-labelledby="customTitle">
+      <h1 class="profile_title" id="customTitle">Кастомизация профиля</h1>
+
+      <div class="custom_layout">
+ 
+        <aside class="custom_preview" aria-label="Предпросмотр профиля">
+          <div class="avatar_preview" aria-label="Аватар">
+            <img src="pictures/me.jpg" alt="Ваш аватар">
+          </div>
+
+          <div class="preview_hint">
+            Подсказка: после сохранения изменения появятся в профиле.
+          </div>
+        </aside>
+
+        <div class="custom_controls">
+          <form class="profile_form" action="#" method="post" enctype="multipart/form-data">
+            <div class="form_group">
+              <label for="nickname">Никнейм</label>
+              <input
+                class="input_field"
+                type="text"
+                id="nickname"
+                name="nickname"
+                placeholder="Например: PiDEP_Pro"
+                maxlength="20"
+                required
+              >
+            </div>
+
+            <div class="form_group">
+              <label for="bio">О себе</label>
+              <textarea
+                class="input_field"
+                id="bio"
+                name="bio"
+                rows="4"
+                placeholder="Коротко о себе (до 160 символов)"
+                maxlength="160"
+              ></textarea>
+            </div>
+
+            <div class="form_group">
+              <label for="avatarFile">Аватар</label>
+              <input class="input_field" type="file" id="avatarFile" name="avatar" accept="image/*">
+            </div>
+
+            <div class="form_group">
+              <label>Цвет акцента</label>
+              <div class="swatches" role="radiogroup" aria-label="Выбор цвета акцента">
+                <label class="swatch" title="Зеленый (по умолчанию)">
+                  <input type="radio" name="accent" value="green" checked>
+                  <span style="background:#2D6029;"></span>
+                </label>
+                <label class="swatch" title="Золотой">
+                  <input type="radio" name="accent" value="gold">
+                  <span style="background:#B8872B;"></span>
+                </label>
+                <label class="swatch" title="Синий">
+                  <input type="radio" name="accent" value="blue">
+                  <span style="background:#2B5FB8;"></span>
+                </label>
+                <label class="swatch" title="Фиолетовый">
+                  <input type="radio" name="accent" value="purple">
+                  <span style="background:#7B3FB8;"></span>
+                </label>
+                <label class="swatch" title="Красный">
+                  <input type="radio" name="accent" value="red">
+                  <span style="background:#B83F3F;"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+            <div class="form_group">
+              <label for="favGame">Любимая игра (будет в профиле)</label>
+              <input
+                class="input_field"
+                type="text"
+                id="favGame"
+                name="favorite_game"
+                placeholder="Например: Lucky Slots"
+              >
+            </div>
+
+            <div class="action_row">
+              <button class="action_btn" type="submit">Сохранить изменения</button>
+              <button class="action_btn secondary" type="reset">Сбросить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+      <footer class="site_footer">
+  <div class="footer_container">
+    
+    <div class="footer_column">
+      <h4>Информация</h4>
+      <a href="faq.html" class="footer_link" target="_blank">FAQ (Частые вопросы)</a>
+      <a href="agreement.html" class="footer_link" target="_blank">Пользовательское соглашение</a>
+    </div>
+
+    <div class="footer_column">
+      <h4>Контакты</h4>
+      <a href="https://t.me/LikholetovMichael" target="_blank" class="footer_link">Telegram DM</a>
+      <a href="mailto:michaellikholetov@gmail.com" class="footer_link">michaellikholetov@gmail.com</a>
+      <a href="tel:+79217400069" class="footer_link">+7 (921) 740 00 69</a>
+    </div>
+
+  </div>
+</footer>
+</body>

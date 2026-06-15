@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль - PiDEP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a class="logo" href="index.html">
+      <img src="pictures/logo.png" alt="логотип" />
+    </a>
+
+    <nav class="left_nav">
+      <a class="shop_button nav_btn" href="shop.html">Магазин</a>
+      <a class="sales_button nav_btn" href="sales.html">Акции</a>
+    </nav>
+
+    <nav class="right_nav">
+      <a class="profile_button nav_btn" href="profile.html">Профиль</a>
+    </nav>
+  </header>
+
+<main>
+  <div class="profile_space">
+<section class="profile_card">
+  <h1 class="profile_title">Личные данные</h1>
+
+  <form class="profile_form" action="#" method="post">
+  <div class="form_group">
+    <label for="lastname">Фамилия</label>
+    <input id="lastname" name="lastname" class="input_field" type="text"
+           placeholder="Введите фамилию" required>
+  </div>
+
+  <div class="form_group">
+    <label for="firstname">Имя</label>
+    <input id="firstname" name="firstname" class="input_field" type="text"
+           placeholder="Введите имя" required>
+  </div>
+
+  <div class="form_group">
+    <label for="middlename">Отчество</label>
+    <input id="middlename" name="middlename" class="input_field" type="text"
+           placeholder="Введите отчество" required>
+  </div>
+
+  <div class="form_group">
+    <label for="dob">Дата рождения</label>
+    <input id="dob" name="dob" class="input_field" type="date" required>
+  </div>
+
+  <button class="action_btn" type="submit">Сохранить</button>
+</form>
+
+</section>
+<section class="profile_links">
+  <a href="statistics.html" class="profile_button">статистика</a>
+  <a href="balance.html" class="profile_button">баланс</a>
+  <a href="privacy.html" class="profile_button">настройки приватности</a>
+  <a href="custom.html" class="profile_button">кастомизация профиля</a>
+</section>
+</div>
+</main>
+
+  <footer class="site_footer">
+  <div class="footer_container">
+    
+    <div class="footer_column">
+      <h4>Информация</h4>
+      <a href="faq.html" class="footer_link" target="_blank">FAQ (Частые вопросы)</a>
+      <a href="agreement.html" class="footer_link" target="_blank">Пользовательское соглашение</a>
+    </div>
+
+    <div class="footer_column">
+      <h4>Контакты</h4>
+      <a href="https://t.me/LikholetovMichael" target="_blank" class="footer_link">Telegram DM</a>
+      <a href="mailto:michaellikholetov@gmail.com" class="footer_link">michaellikholetov@gmail.com</a>
+      <a href="tel:+79217400069" class="footer_link">+7 (921) 740 00 69</a>
+    </div>
+
+  </div>
+</footer>
+ 
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статистика - PiDEP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="index.html">
+      <img src="pictures/logo.png" alt="логотип" />
+    </a>
+
+    <nav class="left_nav">
+      <a class="shop_button nav_btn" href="shop.html">Магазин</a>
+      <a class="sales_button nav_btn" href="sales.html">Акции</a>
+    </nav>
+
+    <nav class="right_nav">
+      <a class="profile_button nav_btn" href="profile.html">Профиль</a>
+    </nav>
+  </header>
+
+<main class="background">
+  <div class="container">
+    <section class="profile_card" aria-labelledby="statsTitle">
+      <h1 class="profile_title" id="statsTitle">Статистика</h1>
+
+      <form class="profile_form" action="#" method="get">
+        <div class="form_group">
+          <label for="period">Период</label>
+          <select class="input_field" id="period" name="period">
+            <option value="7d" selected>Последние 7 дней</option>
+            <option value="30d">Последние 30 дней</option>
+            <option value="all">За всё время</option>
+            <option value="custom">Выбрать даты</option>
+          </select>
+        </div>
+
+        <div class="form_group">
+          <label for="fromDate">С</label>
+          <input class="input_field" type="date" id="fromDate" name="from">
+        </div>
+
+        <div class="form_group">
+          <label for="toDate">По</label>
+          <input class="input_field" type="date" id="toDate" name="to">
+        </div>
+
+        <button class="action_btn" type="submit">Обновить статистику</button>
+      </form>
+
+      <div class="profile_form" aria-label="Сводка">
+        <div class="form_group">
+          <label>Сыграно игр</label>
+          <div class="input_field">128</div>
+        </div>
+
+        <div class="form_group">
+          <label>Побед / поражений</label>
+          <div class="input_field">52 / 76</div>
+        </div>
+
+        <div class="form_group">
+          <label>Процент побед</label>
+          <div class="input_field">40.6%</div>
+        </div>
+
+        <div class="form_group">
+          <label>Сумма ставок</label>
+          <div class="input_field">18 900 ₽</div>
+        </div>
+
+        <div class="form_group">
+          <label>Сумма выигрышей</label>
+          <div class="input_field">17 250 ₽</div>
+        </div>
+
+        <div class="form_group">
+          <label>Чистый результат</label>
+          <div class="input_field">-1 650 ₽</div>
+        </div>
+
+        <div class="form_group">
+          <label>Крупнейший выигрыш</label>
+          <div class="input_field">2 400 ₽ (Слоты)</div>
+        </div>
+
+        <div class="form_group">
+          <label>Средняя ставка</label>
+          <div class="input_field">148 ₽</div>
+        </div>
+
+        <div class="form_group">
+          <label>Любимая игра</label>
+          <div class="input_field">Слоты</div>
+        </div>
+      </div>
+
+      <div class="profile_form" aria-label="Последние сессии">
+        <div class="form_group">
+          <label>Последние сессии</label>
+
+          <div class="input_field" style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+            <span>03.02.2026</span>
+            <span style="opacity:.8;">Игр: 14</span>
+            <span style="opacity:.8;">Результат: +320 ₽</span>
+          </div>
+
+          <div class="input_field" style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:10px;">
+            <span>02.02.2026</span>
+            <span style="opacity:.8;">Игр: 9</span>
+            <span style="opacity:.8;">Результат: -500 ₽</span>
+          </div>
+
+          <div class="input_field" style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:10px;">
+            <span>01.02.2026</span>
+            <span style="opacity:.8;">Игр: 11</span>
+            <span style="opacity:.8;">Результат: -240 ₽</span>
+          </div>
+
+          <a class="nav_btn" href="balance.html" style="display:inline-block; margin-top:14px;">
+            Перейти к балансу
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+      <footer class="site_footer">
+  <div class="footer_container">
+    
+    <div class="footer_column">
+      <h4>Информация</h4>
+      <a href="faq.html" class="footer_link" target="_blank">FAQ (Частые вопросы)</a>
+      <a href="agreement.html" class="footer_link" target="_blank">Пользовательское соглашение</a>
+    </div>
+
+    <div class="footer_column">
+      <h4>Контакты</h4>
+      <a href="https://t.me/LikholetovMichael" target="_blank" class="footer_link">Telegram DM</a>
+      <a href="mailto:michaellikholetov@gmail.com" class="footer_link">michaellikholetov@gmail.com</a>
+      <a href="tel:+79217400069" class="footer_link">+7 (921) 740 00 69</a>
+    </div>
+
+  </div>
+</footer>
+</body>

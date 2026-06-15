@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Баланс - PiDEP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="index.html">
+      <img src="pictures/logo.png" alt="логотип" />
+    </a>
+
+    <nav class="left_nav">
+      <a class="shop_button nav_btn" href="shop.html">Магазин</a>
+      <a class="sales_button nav_btn" href="sales.html">Акции</a>
+    </nav>
+
+    <nav class="right_nav">
+      <a class="profile_button nav_btn" href="profile.html">Профиль</a>
+    </nav>
+  </header>
+
+<main class="background">
+  <div class="container">
+    <section class="profile_card" aria-labelledby="balanceTitle">
+      <h1 class="profile_title" id="balanceTitle">Баланс</h1>
+
+      <div class="profile_form">
+        <div class="form_group">
+          <label>Текущий баланс</label>
+          <div class="input_field" role="group" aria-label="Текущий баланс">
+            <span style="opacity:.8;">Основной:</span>
+            <strong style="margin-left:10px;">12 450 ₽</strong>
+            <span style="margin-left:12px; opacity:.8;">Бонусный:</span>
+            <strong style="margin-left:10px;">1 200 ₽</strong>
+          </div>
+        </div>
+
+        <form class="profile_form" action="#" method="post">
+          <div class="form_group">
+            <label for="depositAmount">Пополнить счет</label>
+            <input
+              class="input_field"
+              type="number"
+              id="depositAmount"
+              name="deposit_amount"
+              placeholder="Сумма (например, 1000)"
+              min="1"
+              step="1"
+              required
+            >
+          </div>
+
+          <div class="form_group">
+            <label for="depositMethod">Способ оплаты</label>
+            <select class="input_field" id="depositMethod" name="deposit_method" required>
+              <option value="card" selected>Банковская карта</option>
+              <option value="sbp">СБП</option>
+              <option value="wallet">Электронный кошелек</option>
+            </select>
+          </div>
+
+          <button class="action_btn" type="submit">Пополнить</button>
+        </form>
+
+        <form class="profile_form" action="#" method="post">
+          <div class="form_group">
+            <label for="withdrawAmount">Вывести средства</label>
+            <input
+              class="input_field"
+              type="number"
+              id="withdrawAmount"
+              name="withdraw_amount"
+              placeholder="Сумма (не менее 500)"
+              min="1"
+              step="1"
+              required
+            >
+          </div>
+
+          <div class="form_group">
+            <label for="withdrawMethod">Куда вывести</label>
+            <select class="input_field" id="withdrawMethod" name="withdraw_method" required>
+              <option value="card" selected>На карту</option>
+              <option value="wallet">На кошелек</option>
+            </select>
+          </div>
+
+          <div class="form_group">
+            <label for="withdrawComment">Комментарий (необязательно)</label>
+            <input
+              class="input_field"
+              type="text"
+              id="withdrawComment"
+              name="withdraw_comment"
+              placeholder="Например: вывод на основную карту"
+            >
+          </div>
+
+          <button class="action_btn" type="submit">Создать заявку на вывод</button>
+        </form>
+
+        <form class="profile_form" action="#" method="post">
+          <div class="form_group">
+            <label for="promoCode">Промокод</label>
+            <input
+              class="input_field"
+              type="text"
+              id="promoCode"
+              name="promo_code"
+              placeholder="Введите промокод"
+              autocomplete="off"
+            >
+          </div>
+
+          <button class="action_btn" type="submit">Активировать промокод</button>
+        </form>
+
+        <div class="form_group">
+          <label>История операций</label>
+
+          <div class="input_field" role="group" aria-label="Операция 1" style="display:flex; justify-content:space-between; gap:12px;">
+            <span>Пополнение</span>
+            <span style="opacity:.8;">+1 000 ₽</span>
+            <span style="opacity:.6;">03.02.2026</span>
+          </div>
+
+          <div class="input_field" role="group" aria-label="Операция 2" style="display:flex; justify-content:space-between; gap:12px; margin-top:10px;">
+            <span>Ставка</span>
+            <span style="opacity:.8;">-200 ₽</span>
+            <span style="opacity:.6;">03.02.2026</span>
+          </div>
+
+          <div class="input_field" role="group" aria-label="Операция 3" style="display:flex; justify-content:space-between; gap:12px; margin-top:10px;">
+            <span>Выигрыш</span>
+            <span style="opacity:.8;">+450 ₽</span>
+            <span style="opacity:.6;">02.02.2026</span>
+          </div>
+
+          <a class="nav_btn" href="faq.html" style="display:inline-block; margin-top:14px;">
+            Вопросы по платежам (FAQ)
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+      <footer class="site_footer">
+  <div class="footer_container">
+    
+    <div class="footer_column">
+      <h4>Информация</h4>
+      <a href="faq.html" class="footer_link" target="_blank">FAQ (Частые вопросы)</a>
+      <a href="agreement.html" class="footer_link" target="_blank">Пользовательское соглашение</a>
+    </div>
+
+    <div class="footer_column">
+      <h4>Контакты</h4>
+      <a href="https://t.me/LikholetovMichael" target="_blank" class="footer_link">Telegram DM</a>
+      <a href="mailto:michaellikholetov@gmail.com" class="footer_link">michaellikholetov@gmail.com</a>
+      <a href="tel:+79217400069" class="footer_link">+7 (921) 740 00 69</a>
+    </div>
+
+  </div>
+</footer>
+</body>
